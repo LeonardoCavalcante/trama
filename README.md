@@ -113,3 +113,7 @@ Use apenas estes valores em `data-category` nos cards de `pages/blog.html`:
 3. Post tem bloco de autor preenchido.
 4. Sem links quebrados.
 5. Sem erros de layout em mobile.
+
+## Manutencao e colaboracao
+
+- Guia completo para acesso de outras pessoas, fluxo de manutencao, pull, commit e push: `docs/guia-manutencao-repositorio.md`
