@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRAMA | Transportes e Meio Ambiente</title>
+    <meta
+      name="description"
+      content="Site institucional do laboratorio TRAMA - Transportes e Meio Ambiente"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" id="topo">
+      <div class="container header-wrap">
+        <a class="brand" href="#topo" aria-label="TRAMA inicio">
+          <img class="ufc-logo" src="assets/images/brasao1_horizontal_cor_300dpi.png" alt="Universidade Federal do Ceará" />
+          <img class="trama-logo" src="assets/images/logo-trama.png" alt="TRAMA" />
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+
+        <nav class="site-nav" aria-label="Navegacao principal">
+          <a href="index.html">Inicio</a>
+          <a href="pages/sobre.html">Sobre</a>
+          <a href="pages/pessoas.html">Pessoas</a>
+          <div class="site-nav__item">
+            <button class="site-nav__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Pesquisa</button>
+            <div class="site-nav__dropdown" aria-label="Submenu de pesquisa">
+              <a href="pages/projetos.html">Projetos</a>
+              <a href="pages/publicacoes.html">Publicações</a>
+            </div>
+          </div>
+          <a href="pages/parceiros.html">Parceiros</a>
+          <a href="pages/blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <img
+          class="hero-bg"
+          src="assets/images/imagem-fundo-inicial.png"
+          alt="Vista aerea de uma via urbana com arvores"
+        />
+        <div class="hero-content container">
+          <h1 class="hero-title"><img src="assets/images/logo-trama-imagens.png" alt="TRAMA" /></h1>
+        </div>
+      </section>
+
+      <section class="sobre section" id="sobre">
+        <div class="container split">
+          <div>
+            <h2>Transformando o transporte, preservando o futuro.</h2>
+            <p>
+              Nos dedicamos a entender e solucionar os impactos ambientais dos sistemas de
+              transporte. Atraves de pesquisas e parcerias estrategicas, trabalhamos para
+              equilibrar a operacao logistica com o bem-estar social.
+            </p>
+            <a href="#pessoas" class="btn-outline">Saiba mais sobre o TRAMA</a>
+          </div>
+          <div class="about-image-wrap">
+            <img
+              class="about-image"
+              src="assets/images/imagem-curculo.webp"
+              alt="Malha urbana circular - TRAMA"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="atuacao section" id="pesquisa">
+        <div class="container">
+          <h2>Áreas de Atuação</h2>
+          <div class="cards-grid">
+            <article class="card-overlay">
+                <img src="assets/images/infraestrutura-de-transporte-734x490.jpg" alt="Infraestrutura" />
+              <div class="card-content">
+                <h3>Infraestrutura</h3>
+                <p>
+                  Estudo do comportamento de materiais, pavimentação urbana e o impacto térmico
+                  das superfícies no microclima.
+                </p>
+                <a href="#" class="card-btn">Saiba mais</a>
+              </div>
+            </article>
+
+            <article class="card-overlay">
+                <img src="assets/images/ft-08-gestao-da-logistica-de-distribuicao-dos-transportes-1583331295.jpg" alt="Planejamento e Operação" />
+              <div class="card-content">
+                <h3>Planejamento e Operação</h3>
+                <p>
+                  Otimização de sistemas de transporte e logística urbana, com foco na
+                  eficiência operacional e na redução de impactos ambientais.
+                </p>
+                <a href="#" class="card-btn">Saiba mais</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="questoes section" id="parcerias">
+        <div class="container">
+          <h2>Questões de Pesquisa</h2>
+          <div class="research-grid">
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-calor.svg" alt="Ilhas de Calor" /></div>
+              <h3 class="research-title">Ilhas de Calor Urbano</h3>
+              <p class="research-desc">Análise da formação de ilhas térmicas em áreas urbanas e estratégias de mitigação por meio de cobertura vegetal e materiais reflexivos.</p>
+            </article>
+
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-co2.svg" alt="Emissões de CO2" /></div>
+              <h3 class="research-title">Emissões de CO2</h3>
+              <p class="research-desc">Mapeamento das emissões veiculares em corredores urbanos e avaliação de medidas para redução de carbono no transporte.</p>
+            </article>
+
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-co2.svg" alt="Qualidade do Ar" /></div>
+              <h3 class="research-title">Qualidade do Ar</h3>
+              <p class="research-desc">Monitoramento de poluentes atmosféricos e análise dos efeitos na saúde pública associados ao tráfego rodoviário.</p>
+            </article>
+
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-calor.svg" alt="Materiais e Pavimentação" /></div>
+              <h3 class="research-title">Materiais e Pavimentação</h3>
+              <p class="research-desc">Estudo de novas tecnologias de pavimentação para reduzir absorção térmica e melhorar a durabilidade das superfícies urbanas.</p>
+            </article>
+
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-co2.svg" alt="Mobilidade Ativa" /></div>
+              <h3 class="research-title">Mobilidade Ativa</h3>
+              <p class="research-desc">Avaliação de infraestrutura para pedestres e ciclistas, buscando modos ativos mais seguros e eficientes.</p>
+            </article>
+
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-calor.svg" alt="Logística Urbana" /></div>
+              <h3 class="research-title">Logística Urbana</h3>
+              <p class="research-desc">Otimização de rotas e consolidação de cargas para reduzir deslocamentos e impactos ambientais na cidade.</p>
+            </article>
+
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-calor.svg" alt="Infraestrutura Resiliente" /></div>
+              <h3 class="research-title">Infraestrutura Resiliente</h3>
+              <p class="research-desc">Projetos adaptativos para enfrentar eventos extremos, com foco em drenagem, manutenção e segurança urbana.</p>
+            </article>
+
+            <article class="research-item">
+              <div class="research-icon"><img src="assets/icons/icon-co2.svg" alt="Sensoriamento Remoto" /></div>
+              <h3 class="research-title">Sensoriamento Remoto</h3>
+              <p class="research-desc">Uso de imagens aéreas e sensores para mapear superfícies urbanas, identificar padrões térmicos e orientar intervenções.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="numeros" id="blog">
+        <div class="container numeros-wrap">
+          <div class="numeros-header">
+            <h2>Nossos Números</h2>
+            <p class="numeros-sub">Impacto do TRAMA em pesquisa, formação e investimentos.</p>
+          </div>
+
+          <div class="numeros-grid">
+            <div class="numero-card">
+              <div class="numero-card-inner">
+                <div class="numero-value"><span class="kpi-value" data-target="500">0</span><span class="kpi-suffix">+</span></div>
+                <div class="numero-label">Artigos publicados</div>
+              </div>
+            </div>
+
+            <div class="numero-card">
+              <div class="numero-card-inner">
+                <div class="numero-value"><span class="kpi-value" data-target="500">0</span><span class="kpi-suffix">+</span></div>
+                <div class="numero-label">Profissionais formados</div>
+              </div>
+            </div>
+
+            <div class="numero-card">
+              <div class="numero-card-inner">
+                <div class="numero-value"><span class="kpi-value" data-target="500">0</span><span class="kpi-suffix"> bi</span></div>
+                <div class="numero-label">Investimentos analisados</div>
+              </div>
+            </div>
+
+            <div class="numero-card">
+              <div class="numero-card-inner">
+                <div class="numero-value"><span class="kpi-value" data-target="500">0</span><span class="kpi-suffix">+</span></div>
+                <div class="numero-label">Projetos apoiados</div>
+              </div>
+            </div>
+
+            <div class="numero-card">
+              <div class="numero-card-inner">
+                <div class="numero-value"><span class="kpi-value" data-target="1">0</span></div>
+                <div class="numero-label">Patente</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="galeria section" id="galeria">
+        <div class="carousel" data-carousel aria-label="Galeria de fotos do TRAMA">
+          <button class="carousel__btn carousel__btn--prev" data-carousel-button="prev" aria-label="Anterior">‹</button>
+          <div class="carousel__track-container">
+            <ul class="carousel__track">
+              <li class="carousel__slide current-slide">
+                <img src="https://picsum.photos/1920/1080?random=101" alt="Galeria 1" />
+                <img class="carousel__logo carousel__logo--left" src="assets/images/logohorizontalufc-branco.png" alt="UFC" />
+                <img class="carousel__logo carousel__logo--right" src="assets/images/logo-trama-imagens.png" alt="TRAMA" />
+                <div class="carousel__caption">Equipe do laboratório TRAMA</div>
+              </li>
+              <li class="carousel__slide">
+                <img src="https://picsum.photos/1920/1080?random=102" alt="Galeria 2" />
+                <img class="carousel__logo carousel__logo--left" src="assets/images/logohorizontalufc-branco.png" alt="UFC" />
+                <img class="carousel__logo carousel__logo--right" src="assets/images/logo-trama-imagens.png" alt="TRAMA" />
+                <div class="carousel__caption">Medição de tráfego urbano</div>
+              </li>
+              <li class="carousel__slide">
+                <img src="https://picsum.photos/1920/1080?random=103" alt="Galeria 3" />
+                <img class="carousel__logo carousel__logo--left" src="assets/images/logohorizontalufc-branco.png" alt="UFC" />
+                <img class="carousel__logo carousel__logo--right" src="assets/images/logo-trama-imagens.png" alt="TRAMA" />
+                <div class="carousel__caption">Workshop e parcerias</div>
+              </li>
+              <li class="carousel__slide">
+                <img src="https://picsum.photos/1920/1080?random=104" alt="Galeria 4" />
+                <img class="carousel__logo carousel__logo--left" src="assets/images/logohorizontalufc-branco.png" alt="UFC" />
+                <img class="carousel__logo carousel__logo--right" src="assets/images/logo-trama-imagens.png" alt="TRAMA" />
+                <div class="carousel__caption">Projeto de campo e levantamentos</div>
+              </li>
+            </ul>
+          </div>
+          <button class="carousel__btn carousel__btn--next" data-carousel-button="next" aria-label="Próximo">›</button>
+          <div class="carousel__nav" aria-hidden="true">
+            <button class="carousel__indicator current-indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+          </div>
+        </div>
+      </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/images/logo-trama-imagens.png" alt="TRAMA" />
+        </div>
+
+        <div>
+          <h3>Endereço</h3>
+          <p>Campus Central - Bloco 7, Sala 204</p>
+          <p>Av. das Pesquisas, 1200 - Fortaleza, CE - Brasil</p>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+          <p>E-mail: trama@ufc.br</p>
+          <p>Telefone: +55 (85) 99999-1234</p>
+        </div>
+
+        <div>
+          <h3>Redes sociais</h3>
+          <div class="footer-socials" aria-label="Redes sociais do TRAMA">
+            <a class="footer-social" href="#" aria-label="YouTube do TRAMA">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.8 8.1s-.2-1.4-.8-2c-.8-.9-1.8-.9-2.2-1C15.8 4.8 12 4.8 12 4.8h0s-3.8 0-6.8.3c-.4.1-1.4.1-2.2 1-.6.6-.8 2-.8 2S2 9.8 2 11.5v1c0 1.7.2 3.4.2 3.4s.2 1.4.8 2c.8.9 1.9.9 2.4 1 1.7.2 7.2.3 7.2.3s3.8 0 6.8-.3c.4-.1 1.4-.1 2.2-1 .6-.6.8-2 .8-2s.2-1.7.2-3.4v-1c0-1.7-.2-3.4-.2-3.4ZM9.6 14.7V9.3l5.5 2.7-5.5 2.7Z"/>
+              </svg>
+            </a>
+            <a class="footer-social" href="#" aria-label="Instagram do TRAMA">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 2.5A5.5 5.5 0 1 1 6.5 12 5.51 5.51 0 0 1 12 6.5Zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5Zm6.1-2.6a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2Z"/>
+              </svg>
+            </a>
+            <a class="footer-social" href="#" aria-label="LinkedIn do TRAMA">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5.5 3.5A2 2 0 1 1 3.5 1.5a2 2 0 0 1 2 2Zm-2 4.1H7v15H3.5Zm6.1 0H15v2.1h.1a5.4 5.4 0 0 1 4.9-2.7c5.2 0 6.1 3.4 6.1 7.7v8H22V15c0-2.1 0-4.8-3-4.8s-3.4 2.3-3.4 4.6v8.2h-3.9Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p class="footer-copy">© 2026 TRAMA. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,641 @@
+@media (max-width: 980px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+
+  .header-wrap {
+    min-height: 4.5rem;
+    gap: 1rem;
+  }
+
+  .brand {
+    gap: 0.75rem;
+  }
+
+  .brand .ufc-logo {
+    max-height: 42px;
+  }
+
+  .brand .trama-logo {
+    max-height: 46px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .split p {
+    max-width: none;
+    font-size: 1.08rem;
+  }
+
+  .about-image-wrap {
+    width: min(72vw, 320px);
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .research-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .numeros-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .publicacoes-hero {
+    min-height: 340px;
+  }
+
+  .publicacoes-hero__content {
+    padding-bottom: 2.2rem;
+  }
+
+  .publicacoes-lista.section {
+    padding: 3.2rem 0 4rem;
+  }
+
+  .publicacao-item h3 {
+    max-width: none;
+    font-size: clamp(1.14rem, 2.6vw, 1.45rem);
+  }
+
+  .footer-grid--publicacoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .people-tree {
+    padding: 1.3rem 1rem 1.4rem;
+  }
+
+  .people-tier {
+    gap: 1rem;
+  }
+
+  .people-branches {
+    height: 46px;
+  }
+
+  .people-branches::before {
+    height: 18px;
+  }
+
+  .people-branches::after {
+    top: 18px;
+    width: 84%;
+  }
+
+  .people-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .people-grid--doutorado,
+  .people-grid--mestrado,
+  .people-grid--ic,
+  .people-grid--egressos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .people-node--doutorado {
+    --avatar-size: 96px;
+  }
+
+  .people-node--mestrado {
+    --avatar-size: 84px;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blog-cta__box {
+    padding: 1.1rem 1rem;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 1rem;
+    min-width: min(320px, calc(100vw - 2rem));
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 90;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a,
+  .site-nav__dropdown-trigger {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .site-nav__item {
+    width: 100%;
+  }
+
+  .site-nav__dropdown {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: 0;
+    margin-top: 0.4rem;
+    padding: 0.45rem 0 0.15rem;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .site-nav__item.is-open .site-nav__dropdown {
+    display: flex;
+  }
+
+  .site-nav__dropdown a {
+    padding-inline: 0.75rem;
+  }
+
+  .hero {
+    min-height: 66vh;
+  }
+
+  .hero-title img {
+    width: min(76vw, 420px);
+  }
+
+  .card-overlay {
+    min-height: 360px;
+  }
+
+  .card-content {
+    inset: auto 1.25rem 1.25rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.55rem;
+  }
+
+  .card-content p {
+    font-size: 0.98rem;
+  }
+
+  .carousel__slide > img:first-child {
+    height: 380px;
+  }
+
+  .carousel__caption {
+    bottom: 14px;
+    max-width: 92%;
+    font-size: 0.9rem;
+  }
+
+  .carousel__logo {
+    display: none;
+  }
+
+  .carousel__btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 1.25rem);
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .header-wrap {
+    min-height: 4.2rem;
+    gap: 0.75rem;
+  }
+
+  .brand {
+    gap: 0.6rem;
+  }
+
+  .brand .ufc-logo {
+    max-height: 34px;
+  }
+
+  .brand .trama-logo {
+    max-height: 40px;
+  }
+
+  .menu-toggle {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .site-nav {
+    left: 0.625rem;
+    right: 0.625rem;
+    min-width: 0;
+    width: calc(100vw - 1.25rem);
+  }
+
+  .site-nav a,
+  .site-nav__dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+    padding-block: 0.6rem;
+  }
+
+  .site-nav__dropdown a {
+    padding-block: 0.7rem;
+  }
+
+  .hero {
+    min-height: 56vh;
+  }
+
+  .hero-title img {
+    width: min(82vw, 320px);
+  }
+
+  .split h2,
+  .atuacao h2,
+  .questoes h2,
+  .numeros h2 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .split p {
+    font-size: 1rem;
+  }
+
+  .about-image-wrap {
+    width: min(78vw, 260px);
+  }
+
+  .btn-outline,
+  .card-btn {
+    min-height: 44px;
+  }
+
+  .cards-grid,
+  .research-grid,
+  .numeros-grid,
+  .footer-grid,
+  .icon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .publicacoes-hero {
+    min-height: 300px;
+  }
+
+  .publicacoes-hero__content {
+    padding-bottom: 1.6rem;
+  }
+
+  .publicacoes-hero__content h1 {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+  }
+
+  .publicacoes-hero__content p {
+    font-size: 1rem;
+  }
+
+  .publicacoes-lista.section {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .publicacoes-ano h2 {
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+  }
+
+  .publicacao-item {
+    padding-top: 1.4rem;
+  }
+
+  .publicacao-item p {
+    font-size: 0.96rem;
+  }
+
+  .publicacao-links {
+    gap: 0.75rem;
+  }
+
+  .people-legend {
+    gap: 0.45rem;
+  }
+
+  .people-tier {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .people-node--lider {
+    max-width: none;
+  }
+
+  .people-branches {
+    display: none;
+  }
+
+  .people-grid--doutorado,
+  .people-grid--mestrado,
+  .people-grid--ic,
+  .people-grid--egressos {
+    grid-template-columns: 1fr;
+  }
+
+  .people-node {
+    gap: 0.6rem;
+    padding: 0.58rem;
+  }
+
+  .people-node--doutorado {
+    --avatar-size: 84px;
+  }
+
+  .people-node--mestrado,
+  .people-node--egresso {
+    --avatar-size: 72px;
+  }
+
+  .people-node--ic {
+    --avatar-size: 64px;
+  }
+
+  .people-meta strong {
+    font-size: 0.9rem;
+  }
+
+  .people-modal__dialog {
+    padding: 1rem 0.95rem 1.1rem;
+  }
+
+  .people-modal__head {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .people-modal__foto {
+    width: 88px;
+    height: 88px;
+  }
+
+  .blog-hero.section {
+    padding: 2.4rem 0 1.6rem;
+  }
+
+  .blog-hero__wrap {
+    border-radius: 18px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card img {
+    height: 190px;
+  }
+
+  .blog-author {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .blog-author img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+    align-items: center;
+  }
+
+  .footer-grid--publicacoes {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .site-footer--publicacoes .footer-socials {
+    justify-content: flex-start;
+  }
+
+  .footer-grid--publicacoes h3,
+  .footer-grid--publicacoes p {
+    text-align: left;
+  }
+
+  .footer-grid h3,
+  .footer-grid p {
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .card-overlay {
+    min-height: 320px;
+  }
+
+  .card-content {
+    inset: auto 1rem 1rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.35rem;
+  }
+
+  .card-content p {
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+
+  .research-item {
+    min-height: auto;
+    padding: 1.1rem 1rem;
+  }
+
+  .research-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .research-icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .numeros {
+    padding: 4.2rem 0 3rem;
+  }
+
+  .numeros-grid {
+    gap: 0.9rem;
+  }
+
+  .numero-card {
+    padding: 1.15rem 1rem 1.3rem;
+  }
+
+  .numero-label {
+    font-size: 0.95rem;
+  }
+
+  .carousel {
+    gap: 0.6rem;
+  }
+
+  .carousel__track-container {
+    border-radius: 10px;
+  }
+
+  .galeria.section {
+    padding: 2rem 0 2.5rem;
+  }
+
+  .carousel__btn {
+    display: none;
+  }
+
+  .carousel__slide > img:first-child {
+    height: 190px;
+  }
+
+  .carousel__caption {
+    left: 50%;
+    bottom: 12px;
+    width: calc(100% - 1rem);
+    max-width: none;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.82rem;
+    line-height: 1.25;
+  }
+
+  .carousel__logo {
+    display: none;
+  }
+
+  .carousel__nav {
+    bottom: -18px;
+    gap: 0.4rem;
+  }
+
+  .site-footer {
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-grid {
+    gap: 1.25rem;
+  }
+
+  .footer-logo {
+    width: min(180px, 100%);
+  }
+
+  .footer-social {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-block: 0.6rem;
+  }
+
+  .brand {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .menu-toggle {
+    width: auto;
+    margin-left: auto;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .site-nav {
+    top: calc(100% + 0.35rem);
+    right: 0.5rem;
+    left: 0.5rem;
+    width: auto;
+  }
+
+  .hero {
+    min-height: 52vh;
+  }
+
+  .hero-title img {
+    width: min(88vw, 280px);
+  }
+
+  .card-overlay {
+    min-height: 300px;
+  }
+
+  .carousel__slide > img:first-child {
+    height: 170px;
+  }
+
+  .carousel__caption {
+    font-size: 0.82rem;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .hero:hover .hero-bg,
+  .hero:hover .hero-overlay,
+  .hero:hover .hero-title img,
+  .btn-outline:hover,
+  .card-overlay:hover,
+  .card-overlay:hover img,
+  .card-overlay:hover::after,
+  .card-btn:hover,
+  .research-item:hover,
+  .research-item:hover .research-icon,
+  .numero-card:hover,
+  .footer-social:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card-overlay:hover img {
+    filter: none;
+  }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRAMA | Pessoas</title>
+    <meta name="description" content="Equipe e áreas de atuação do TRAMA" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" id="topo">
+      <div class="container header-wrap">
+        <a class="brand" href="../index.html" aria-label="TRAMA inicio">
+          <img class="ufc-logo" src="../assets/images/brasao1_horizontal_cor_300dpi.png" alt="Universidade Federal do Ceará" />
+          <img class="trama-logo" src="../assets/images/logo-trama.png" alt="TRAMA" />
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+        <nav class="site-nav" aria-label="Navegacao principal">
+          <a href="../index.html">Inicio</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="pessoas.html">Pessoas</a>
+          <div class="site-nav__item">
+            <button class="site-nav__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Pesquisa</button>
+            <div class="site-nav__dropdown" aria-label="Submenu de pesquisa">
+              <a href="projetos.html">Projetos</a>
+              <a href="publicacoes.html">Publicações</a>
+            </div>
+          </div>
+          <a href="parceiros.html">Parceiros</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pessoas-page">
+      <section class="hero" style="min-height: 52vh;">
+        <div class="hero-overlay"></div>
+        <img class="hero-bg" src="../assets/images/imagem-fundo-inicial.png" alt="Vista aérea urbana com vegetação" />
+        <div class="hero-content container">
+          <h1 class="hero-title"><img src="../assets/images/logo-trama-imagens.png" alt="TRAMA" /></h1>
+        </div>
+      </section>
+
+      <section class="section people-tree-section">
+        <div class="container">
+          <div class="people-heading">
+            <h2>Pessoas</h2>
+            <p class="galeria-sub">Estrutura em árvore com coordenação, alunos ativos e egressos do laboratório TRAMA.</p>
+          </div>
+
+          <div class="people-legend" aria-label="Legenda de níveis">
+            <span class="legend-item legend-item--doutorado">Doutorado</span>
+            <span class="legend-item legend-item--mestrado">Mestrado</span>
+            <span class="legend-item legend-item--ic">Iniciação científica</span>
+            <span class="legend-item legend-item--egresso">Egresso(a)</span>
+          </div>
+
+          <section class="people-tree" aria-label="Árvore de membros do laboratório">
+            <div class="people-tier people-tier--lideres">
+              <button
+                class="people-node people-node--lider people-node--doutorado"
+                type="button"
+                data-nome="Prof. Dr. Marcelo Aragão"
+                data-vinculo="Coordenador do Laboratório"
+                data-pesquisa="Planejamento de transportes, modelagem de demanda e logística urbana sustentável."
+                data-concentracao="Infraestrutura de transportes, planejamento urbano e políticas públicas"
+              >
+                <span class="people-avatar">MA</span>
+                <span class="people-meta">
+                  <strong>Prof. Dr. Marcelo Aragão</strong>
+                  <small>Coordenação</small>
+                </span>
+              </button>
+
+              <button
+                class="people-node people-node--lider people-node--doutorado"
+                type="button"
+                data-nome="Profa. Dra. Helena Ribeiro"
+                data-vinculo="Vice-coordenação do Laboratório"
+                data-pesquisa="Qualidade do ar, emissões veiculares e gestão ambiental em corredores urbanos."
+                data-concentracao="Meio ambiente, mobilidade urbana e avaliação de impacto"
+              >
+                <span class="people-avatar">HR</span>
+                <span class="people-meta">
+                  <strong>Profa. Dra. Helena Ribeiro</strong>
+                  <small>Coordenação</small>
+                </span>
+              </button>
+            </div>
+
+            <div class="people-branches" aria-hidden="true"></div>
+
+            <div class="people-groups">
+              <section class="people-group" aria-labelledby="grupo-doutorado">
+                <h3 id="grupo-doutorado">Doutorado</h3>
+                <div class="people-grid people-grid--doutorado">
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Ana Beatriz Costa" data-vinculo="Doutoranda" data-pesquisa="Mapeamento de emissões em vias arteriais." data-concentracao="Emissões e transporte urbano"><span class="people-avatar">AB</span><span class="people-meta"><strong>Ana Beatriz Costa</strong><small>Doutoranda</small></span></button>
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Bruno Lacerda" data-vinculo="Doutorando" data-pesquisa="Modelos de otimização para distribuição urbana." data-concentracao="Logística e pesquisa operacional"><span class="people-avatar">BL</span><span class="people-meta"><strong>Bruno Lacerda</strong><small>Doutorando</small></span></button>
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Camila Nogueira" data-vinculo="Doutoranda" data-pesquisa="Ilhas de calor e materiais de pavimentação." data-concentracao="Pavimentação e conforto térmico"><span class="people-avatar">CN</span><span class="people-meta"><strong>Camila Nogueira</strong><small>Doutoranda</small></span></button>
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Daniel Pessoa" data-vinculo="Doutorando" data-pesquisa="Sistemas inteligentes para operação de corredores." data-concentracao="ITS e mobilidade inteligente"><span class="people-avatar">DP</span><span class="people-meta"><strong>Daniel Pessoa</strong><small>Doutorando</small></span></button>
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Eduarda Vasconcelos" data-vinculo="Doutoranda" data-pesquisa="Resiliência de infraestrutura a eventos extremos." data-concentracao="Infraestrutura resiliente"><span class="people-avatar">EV</span><span class="people-meta"><strong>Eduarda Vasconcelos</strong><small>Doutoranda</small></span></button>
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Felipe Morais" data-vinculo="Doutorando" data-pesquisa="Avaliação ambiental de obras lineares." data-concentracao="Licenciamento e impactos"><span class="people-avatar">FM</span><span class="people-meta"><strong>Felipe Morais</strong><small>Doutorando</small></span></button>
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Giovana Teles" data-vinculo="Doutoranda" data-pesquisa="Microssimulação de tráfego e segurança viária." data-concentracao="Modelagem e segurança"><span class="people-avatar">GT</span><span class="people-meta"><strong>Giovana Teles</strong><small>Doutoranda</small></span></button>
+                  <button class="people-node people-node--doutorado" type="button" data-nome="Hugo Almeida" data-vinculo="Doutorando" data-pesquisa="Políticas de mobilidade ativa em cidades médias." data-concentracao="Planejamento e mobilidade ativa"><span class="people-avatar">HA</span><span class="people-meta"><strong>Hugo Almeida</strong><small>Doutorando</small></span></button>
+                </div>
+              </section>
+
+              <section class="people-group" aria-labelledby="grupo-mestrado">
+                <h3 id="grupo-mestrado">Mestrado</h3>
+                <div class="people-grid people-grid--mestrado">
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Isabela França" data-vinculo="Mestranda" data-pesquisa="Inventário de emissões em frotas urbanas." data-concentracao="Meio ambiente e transporte"><span class="people-avatar">IF</span><span class="people-meta"><strong>Isabela França</strong><small>Mestranda</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="João Victor Nunes" data-vinculo="Mestrando" data-pesquisa="Eficiência energética em corredores de ônibus." data-concentracao="Operação de transportes"><span class="people-avatar">JN</span><span class="people-meta"><strong>João Victor Nunes</strong><small>Mestrando</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Karen Silveira" data-vinculo="Mestranda" data-pesquisa="Desempenho térmico de revestimentos urbanos." data-concentracao="Materiais e pavimentos"><span class="people-avatar">KS</span><span class="people-meta"><strong>Karen Silveira</strong><small>Mestranda</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Lucas Matoso" data-vinculo="Mestrando" data-pesquisa="Distribuição de cargas de última milha." data-concentracao="Logística urbana"><span class="people-avatar">LM</span><span class="people-meta"><strong>Lucas Matoso</strong><small>Mestrando</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Marina Queiroz" data-vinculo="Mestranda" data-pesquisa="Planejamento cicloviário e acessibilidade." data-concentracao="Mobilidade ativa"><span class="people-avatar">MQ</span><span class="people-meta"><strong>Marina Queiroz</strong><small>Mestranda</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Nicolas Pimentel" data-vinculo="Mestrando" data-pesquisa="Controle semafórico adaptativo em interseções." data-concentracao="Sistemas inteligentes"><span class="people-avatar">NP</span><span class="people-meta"><strong>Nicolas Pimentel</strong><small>Mestrando</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Olivia Dantas" data-vinculo="Mestranda" data-pesquisa="Impacto do uso do solo na demanda de viagens." data-concentracao="Planejamento territorial"><span class="people-avatar">OD</span><span class="people-meta"><strong>Olivia Dantas</strong><small>Mestranda</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Paulo César Lins" data-vinculo="Mestrando" data-pesquisa="Risco climático em infraestrutura viária." data-concentracao="Gestão de risco"><span class="people-avatar">PL</span><span class="people-meta"><strong>Paulo César Lins</strong><small>Mestrando</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Raissa Mota" data-vinculo="Mestranda" data-pesquisa="Análise de ruído em eixos de transporte." data-concentracao="Conforto ambiental"><span class="people-avatar">RM</span><span class="people-meta"><strong>Raissa Mota</strong><small>Mestranda</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Thiago Arraes" data-vinculo="Mestrando" data-pesquisa="Gestão de ativos de pavimentação urbana." data-concentracao="Infraestrutura e manutenção"><span class="people-avatar">TA</span><span class="people-meta"><strong>Thiago Arraes</strong><small>Mestrando</small></span></button>
+                  <button class="people-node people-node--mestrado" type="button" data-nome="Yasmin Rocha" data-vinculo="Mestranda" data-pesquisa="Percepção de segurança no transporte público." data-concentracao="Comportamento do usuário"><span class="people-avatar">YR</span><span class="people-meta"><strong>Yasmin Rocha</strong><small>Mestranda</small></span></button>
+                </div>
+              </section>
+
+              <section class="people-group" aria-labelledby="grupo-ic">
+                <h3 id="grupo-ic">Iniciação Científica</h3>
+                <div class="people-grid people-grid--ic">
+                  <button class="people-node people-node--ic" type="button" data-nome="Alice Menezes" data-vinculo="Bolsista IC" data-pesquisa="Levantamento de dados de tráfego por vídeo." data-concentracao="Coleta e processamento de dados"><span class="people-avatar">AM</span><span class="people-meta"><strong>Alice Menezes</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Bernardo Freitas" data-vinculo="Bolsista IC" data-pesquisa="Georreferenciamento de pontos de calor urbano." data-concentracao="SIG e geoprocessamento"><span class="people-avatar">BF</span><span class="people-meta"><strong>Bernardo Freitas</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Clara Albuquerque" data-vinculo="Bolsista IC" data-pesquisa="Classificação de vias por desempenho funcional." data-concentracao="Infraestrutura urbana"><span class="people-avatar">CA</span><span class="people-meta"><strong>Clara Albuquerque</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Davi Sousa" data-vinculo="Bolsista IC" data-pesquisa="Análise de tempos de viagem em corredores." data-concentracao="Operação de trânsito"><span class="people-avatar">DS</span><span class="people-meta"><strong>Davi Sousa</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Elisa Brandão" data-vinculo="Bolsista IC" data-pesquisa="Medição de temperatura superficial em pavimentos." data-concentracao="Conforto térmico"><span class="people-avatar">EB</span><span class="people-meta"><strong>Elisa Brandão</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Fábio Viana" data-vinculo="Bolsista IC" data-pesquisa="Avaliação de acessibilidade em paradas de ônibus." data-concentracao="Mobilidade inclusiva"><span class="people-avatar">FV</span><span class="people-meta"><strong>Fábio Viana</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Gabriela Porto" data-vinculo="Bolsista IC" data-pesquisa="Catalogação de materiais reciclados para pavimento." data-concentracao="Materiais sustentáveis"><span class="people-avatar">GP</span><span class="people-meta"><strong>Gabriela Porto</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Henrique Moura" data-vinculo="Bolsista IC" data-pesquisa="Indicadores de segurança viária em áreas escolares." data-concentracao="Segurança no trânsito"><span class="people-avatar">HM</span><span class="people-meta"><strong>Henrique Moura</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Iara Costa" data-vinculo="Bolsista IC" data-pesquisa="Análise preliminar de qualidade do ar em terminais." data-concentracao="Monitoramento ambiental"><span class="people-avatar">IC</span><span class="people-meta"><strong>Iara Costa</strong><small>IC</small></span></button>
+                  <button class="people-node people-node--ic" type="button" data-nome="Jonas Tavares" data-vinculo="Bolsista IC" data-pesquisa="Dashboard de indicadores de mobilidade ativa." data-concentracao="Visualização de dados"><span class="people-avatar">JT</span><span class="people-meta"><strong>Jonas Tavares</strong><small>IC</small></span></button>
+                </div>
+              </section>
+
+              <section class="people-group people-group--egressos" aria-labelledby="grupo-egressos">
+                <h3 id="grupo-egressos">Egressos</h3>
+                <div class="people-grid people-grid--egressos">
+                  <button class="people-node people-node--egresso" type="button" data-nome="Larissa Fontes" data-vinculo="Egressa" data-pesquisa="Modelagem de emissões no transporte de cargas." data-concentracao="Logística e meio ambiente"><span class="people-avatar">LF</span><span class="people-meta"><strong>Larissa Fontes</strong><small>Egressa</small></span></button>
+                  <button class="people-node people-node--egresso" type="button" data-nome="Mateus Rabelo" data-vinculo="Egresso" data-pesquisa="Planejamento de corredores sustentáveis." data-concentracao="Planejamento de transportes"><span class="people-avatar">MR</span><span class="people-meta"><strong>Mateus Rabelo</strong><small>Egresso</small></span></button>
+                  <button class="people-node people-node--egresso" type="button" data-nome="Nayara Pires" data-vinculo="Egressa" data-pesquisa="Avaliação de pavimentos frios em áreas urbanas." data-concentracao="Infraestrutura e clima urbano"><span class="people-avatar">NP</span><span class="people-meta"><strong>Nayara Pires</strong><small>Egressa</small></span></button>
+                  <button class="people-node people-node--egresso" type="button" data-nome="Otávio Cunha" data-vinculo="Egresso" data-pesquisa="Gestão de dados para apoio à decisão em mobilidade." data-concentracao="Análise de dados e políticas públicas"><span class="people-avatar">OC</span><span class="people-meta"><strong>Otávio Cunha</strong><small>Egresso</small></span></button>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <div class="people-modal" id="pessoa-modal" data-pessoa-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pessoa-modal-nome">
+            <div class="people-modal__dialog">
+              <button class="people-modal__close" type="button" aria-label="Fechar detalhes">×</button>
+              <div class="people-modal__head">
+                <img id="pessoa-modal-foto" class="people-modal__foto" src="" alt="Foto do pesquisador" />
+                <div class="people-modal__intro">
+                  <p class="people-modal__tag" id="pessoa-modal-vinculo">Vínculo</p>
+                  <h3 id="pessoa-modal-nome">Nome da pessoa</h3>
+                  <div class="people-modal__links">
+                    <a id="pessoa-modal-linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a id="pessoa-modal-lattes" href="#" target="_blank" rel="noopener noreferrer">Lattes</a>
+                  </div>
+                </div>
+              </div>
+              <div class="people-modal__bloco">
+                <h4>Pesquisa</h4>
+                <p id="pessoa-modal-pesquisa">Descrição de pesquisa.</p>
+              </div>
+              <div class="people-modal__bloco">
+                <h4>Áreas de concentração</h4>
+                <p id="pessoa-modal-concentracao">Descrição das áreas.</p>
+              </div>
+              <div class="people-modal__bloco people-modal__bloco--projeto">
+                <h4>Projeto em destaque</h4>
+                <img id="pessoa-modal-projeto" src="" alt="Imagem resumo do projeto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand"><img class="footer-logo" src="../assets/images/logo-trama-imagens.png" alt="TRAMA" /></div>
+        <div>
+          <h3>Endereço</h3>
+          <p>Campus Central - Bloco 7, Sala 204</p>
+          <p>Av. das Pesquisas, 1200 - Fortaleza, CE - Brasil</p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>E-mail: trama@ufc.br</p>
+          <p>Telefone: +55 (85) 99999-1234</p>
+        </div>
+        <div>
+          <h3>Redes sociais</h3>
+          <div class="footer-socials" aria-label="Redes sociais do TRAMA">
+            <a class="footer-social" href="#" aria-label="YouTube do TRAMA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 8.1s-.2-1.4-.8-2c-.8-.9-1.8-.9-2.2-1C15.8 4.8 12 4.8 12 4.8h0s-3.8 0-6.8.3c-.4.1-1.4.1-2.2 1-.6.6-.8 2-.8 2S2 9.8 2 11.5v1c0 1.7.2 3.4.2 3.4s.2 1.4.8 2c.8.9 1.9.9 2.4 1 1.7.2 7.2.3 7.2.3s3.8 0 6.8-.3c.4-.1 1.4-.1 2.2-1 .6-.6.8-2 .8-2s.2-1.7.2-3.4v-1c0-1.7-.2-3.4-.2-3.4ZM9.6 14.7V9.3l5.5 2.7-5.5 2.7Z"/></svg></a>
+            <a class="footer-social" href="#" aria-label="Instagram do TRAMA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 2.5A5.5 5.5 0 1 1 6.5 12 5.51 5.51 0 0 1 12 6.5Zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5Zm6.1-2.6a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2Z"/></svg></a>
+            <a class="footer-social" href="#" aria-label="LinkedIn do TRAMA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5A2 2 0 1 1 3.5 1.5a2 2 0 0 1 2 2Zm-2 4.1H7v15H3.5Zm6.1 0H15v2.1h.1a5.4 5.4 0 0 1 4.9-2.7c5.2 0 6.1 3.4 6.1 7.7v8H22V15c0-2.1 0-4.8-3-4.8s-3.4 2.3-3.4 4.6v8.2h-3.9Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom"><p class="footer-copy">© 2026 TRAMA. Todos os direitos reservados.</p></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

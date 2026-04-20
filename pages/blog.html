@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRAMA | Blog</title>
+    <meta name="description" content="Blog e novidades do TRAMA" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" id="topo">
+      <div class="container header-wrap">
+        <a class="brand" href="../index.html" aria-label="TRAMA inicio">
+          <img class="ufc-logo" src="../assets/images/brasao1_horizontal_cor_300dpi.png" alt="Universidade Federal do Ceará" />
+          <img class="trama-logo" src="../assets/images/logo-trama.png" alt="TRAMA" />
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+        <nav class="site-nav" aria-label="Navegacao principal">
+          <a href="../index.html">Inicio</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="pessoas.html">Pessoas</a>
+          <div class="site-nav__item">
+            <button class="site-nav__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Pesquisa</button>
+            <div class="site-nav__dropdown" aria-label="Submenu de pesquisa">
+              <a href="projetos.html">Projetos</a>
+              <a href="publicacoes.html">Publicações</a>
+            </div>
+          </div>
+          <a href="parceiros.html">Parceiros</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="blog-page">
+      <section class="blog-hero section" aria-label="Introdução do blog TRAMA">
+        <div class="container blog-hero__wrap">
+          <p class="blog-hero__eyebrow">Canal Editorial TRAMA</p>
+          <h1>Blog de Pesquisa, Extensão e Impacto Urbano</h1>
+          <p class="blog-hero__intro">Publicações semanais sobre mobilidade, infraestrutura, logística e sustentabilidade, com linguagem técnica e acesso aberto.</p>
+          <a class="btn-outline" href="#feed-semanal">Ver publicações recentes</a>
+        </div>
+      </section>
+
+      <section class="blog-showcase section" id="feed-semanal">
+        <div class="container blog-showcase__grid">
+          <div class="blog-featured-slot" data-featured-slot></div>
+        </div>
+      </section>
+
+      <section class="blog-filter section">
+        <div class="container">
+          <div class="blog-tags" aria-label="Categorias de conteúdo">
+            <button class="blog-tag is-active" type="button" data-filter="todos">Todos</button>
+            <button class="blog-tag" type="button" data-filter="mobilidade-urbana">Mobilidade Urbana</button>
+            <button class="blog-tag" type="button" data-filter="pavimentacao">Pavimentação</button>
+            <button class="blog-tag" type="button" data-filter="logistica">Logística</button>
+            <button class="blog-tag" type="button" data-filter="qualidade-do-ar">Qualidade do Ar</button>
+            <button class="blog-tag" type="button" data-filter="extensao">Extensão</button>
+          </div>
+
+          <div class="blog-grid" aria-label="Lista de publicações do blog">
+            <a class="blog-card-link" href="blog/posts/post-inventario-emissoes.html" data-category="pavimentacao" data-featured="true" aria-label="Abrir publicação: Pavimentos frios e conforto térmico">
+              <article class="blog-card">
+                <img src="../assets/images/infraestrutura-de-transporte-734x490.jpg" alt="Infraestrutura de transporte" />
+                <div class="blog-card__content">
+                  <p class="blog-card__kicker">Infraestrutura</p>
+                  <h3>Pavimentos frios e conforto térmico em vias de alta demanda</h3>
+                  <p>Análise comparativa de materiais com redução de absorção de calor e implicações para o microclima urbano.</p>
+                  <div class="blog-card__meta"><span>11 Abr 2026</span><span>7 min</span></div>
+                </div>
+              </article>
+            </a>
+
+            <a class="blog-card-link" href="blog/posts/post-inventario-emissoes.html" data-category="logistica" aria-label="Abrir publicação: Última milha em áreas centrais">
+              <article class="blog-card">
+                <img src="../assets/images/ft-08-gestao-da-logistica-de-distribuicao-dos-transportes-1583331295.jpg" alt="Operação logística" />
+                <div class="blog-card__content">
+                  <p class="blog-card__kicker">Logística</p>
+                  <h3>Última milha em áreas centrais: indicadores para gestão pública</h3>
+                  <p>Indicadores de produtividade, emissões e tempo de permanência para apoiar novas regras operacionais.</p>
+                  <div class="blog-card__meta"><span>04 Abr 2026</span><span>6 min</span></div>
+                </div>
+              </article>
+            </a>
+
+            <a class="blog-card-link" href="blog/posts/post-inventario-emissoes.html" data-category="mobilidade-urbana" aria-label="Abrir publicação: Segurança viária em entorno escolar">
+              <article class="blog-card">
+                <img src="../assets/images/sobre-cidade.svg" alt="Cidade e pesquisa urbana" />
+                <div class="blog-card__content">
+                  <p class="blog-card__kicker">Mobilidade Urbana</p>
+                  <h3>Segurança viária em entorno escolar: protocolo de auditoria rápida</h3>
+                  <p>Ferramenta prática para diagnóstico de conflito entre fluxos de pedestres, ciclistas e veículos motorizados.</p>
+                  <div class="blog-card__meta"><span>27 Mar 2026</span><span>5 min</span></div>
+                </div>
+              </article>
+            </a>
+
+            <a class="blog-card-link" href="blog/posts/post-inventario-emissoes.html" data-category="mobilidade-urbana" aria-label="Abrir publicação: Estrutura de bancos de dados">
+              <article class="blog-card">
+                <img src="../assets/images/imagem-curculo.webp" alt="Mapa urbano" />
+                <div class="blog-card__content">
+                  <p class="blog-card__kicker">Dados e Métodos</p>
+                  <h3>Como estruturamos bancos de dados para estudos longitudinais</h3>
+                  <p>Padrão adotado no laboratório para reprodutibilidade, versionamento e atualização contínua de indicadores.</p>
+                  <div class="blog-card__meta"><span>20 Mar 2026</span><span>9 min</span></div>
+                </div>
+              </article>
+            </a>
+
+            <a class="blog-card-link" href="blog/posts/post-inventario-emissoes.html" data-category="qualidade-do-ar" aria-label="Abrir publicação: Qualidade do ar em eixos de ônibus">
+              <article class="blog-card">
+                <img src="../assets/images/hero-estrada.svg" alt="Rede viária" />
+                <div class="blog-card__content">
+                  <p class="blog-card__kicker">Meio Ambiente</p>
+                  <h3>Qualidade do ar em eixos de ônibus: resultados do monitoramento piloto</h3>
+                  <p>Discussão sobre material particulado e exposição em corredores de transporte coletivo de alta frequência.</p>
+                  <div class="blog-card__meta"><span>13 Mar 2026</span><span>8 min</span></div>
+                </div>
+              </article>
+            </a>
+
+            <a class="blog-card-link" href="blog/posts/post-inventario-emissoes.html" data-category="extensao" aria-label="Abrir publicação: Oficina com gestores municipais">
+              <article class="blog-card">
+                <img src="../assets/images/logo-trama-imagens.png" alt="Equipe TRAMA" />
+                <div class="blog-card__content">
+                  <p class="blog-card__kicker">Extensão</p>
+                  <h3>Oficina com gestores municipais: da evidência ao plano de ação</h3>
+                  <p>Relato da metodologia de cocriação com setor público para transformar resultados de pesquisa em intervenções.</p>
+                  <div class="blog-card__meta"><span>06 Mar 2026</span><span>4 min</span></div>
+                </div>
+              </article>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-cta section" aria-label="Chamada editorial">
+        <div class="container blog-cta__box">
+          <div>
+            <h2>Publicações técnicas com atualização contínua</h2>
+            <p>O blog reúne conteúdos de pesquisa aplicada, extensão e evidências para apoiar decisões em mobilidade e ambiente urbano.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand"><img class="footer-logo" src="../assets/images/logo-trama-imagens.png" alt="TRAMA" /></div>
+        <div>
+          <h3>Endereço</h3>
+          <p>Campus Central - Bloco 7, Sala 204</p>
+          <p>Av. das Pesquisas, 1200 - Fortaleza, CE - Brasil</p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>E-mail: trama@ufc.br</p>
+          <p>Telefone: +55 (85) 99999-1234</p>
+        </div>
+        <div>
+          <h3>Redes sociais</h3>
+          <div class="footer-socials" aria-label="Redes sociais do TRAMA">
+            <a class="footer-social" href="#" aria-label="YouTube do TRAMA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 8.1s-.2-1.4-.8-2c-.8-.9-1.8-.9-2.2-1C15.8 4.8 12 4.8 12 4.8h0s-3.8 0-6.8.3c-.4.1-1.4.1-2.2 1-.6.6-.8 2-.8 2S2 9.8 2 11.5v1c0 1.7.2 3.4.2 3.4s.2 1.4.8 2c.8.9 1.9.9 2.4 1 1.7.2 7.2.3 7.2.3s3.8 0 6.8-.3c.4-.1 1.4-.1 2.2-1 .6-.6.8-2 .8-2s.2-1.7.2-3.4v-1c0-1.7-.2-3.4-.2-3.4ZM9.6 14.7V9.3l5.5 2.7-5.5 2.7Z"/></svg></a>
+            <a class="footer-social" href="#" aria-label="Instagram do TRAMA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 2.5A5.5 5.5 0 1 1 6.5 12 5.51 5.51 0 0 1 12 6.5Zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5Zm6.1-2.6a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2Z"/></svg></a>
+            <a class="footer-social" href="#" aria-label="LinkedIn do TRAMA"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5A2 2 0 1 1 3.5 1.5a2 2 0 0 1 2 2Zm-2 4.1H7v15H3.5Zm6.1 0H15v2.1h.1a5.4 5.4 0 0 1 4.9-2.7c5.2 0 6.1 3.4 6.1 7.7v8H22V15c0-2.1 0-4.8-3-4.8s-3.4 2.3-3.4 4.6v8.2h-3.9Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom"><p class="footer-copy">© 2026 TRAMA. Todos os direitos reservados.</p></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

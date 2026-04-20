@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" fill="none">
+  <path d="M66 150C41 150 20 130 20 105C20 83 36 65 57 61C65 39 86 24 111 24C136 24 157 39 165 61C186 65 202 83 202 105C202 130 181 150 156 150H66Z" stroke="#B8CB3A" stroke-width="8"/>
+  <text x="68" y="117" font-size="56" font-family="Manrope, Arial, sans-serif" font-weight="700" fill="#B8CB3A">CO</text>
+  <text x="153" y="131" font-size="34" font-family="Manrope, Arial, sans-serif" font-weight="700" fill="#B8CB3A">2</text>
+</svg>
