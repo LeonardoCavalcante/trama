@@ -38,50 +38,131 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero" style="min-height: 52vh;">
-        <div class="hero-overlay"></div>
-        <img class="hero-bg" src="../assets/images/sobre-cidade.svg" alt="Imagem urbana de destaque" />
-        <div class="hero-content container">
-          <h1 class="hero-title"><img src="../assets/images/logo-trama-imagens.png" alt="TRAMA" /></h1>
+    <main class="sobre-page">
+      <section class="page-hero page-hero--about">
+        <img class="page-hero__bg" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80" alt="Prédio universitário moderno" />
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content container">
+          <p class="page-hero__eyebrow">Laboratório, formação e impacto</p>
+          <h1>Sobre o TRAMA</h1>
+          <p>
+            Somos um laboratório de pós-graduação orientado a problemas reais da mobilidade urbana,
+            da infraestrutura e do meio ambiente, com pesquisa, ensino e extensão conectados.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn-outline" href="#contato">Falar com o laboratório</a>
+            <a class="btn-outline" href="projetos.html">Ver projetos</a>
+          </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container split">
+        <div class="container split about-intro">
           <div>
-            <h2>Sobre o TRAMA</h2>
+            <p class="page-hero__eyebrow">Quem somos</p>
+            <h2>Uma base acadêmica voltada para cidades melhores</h2>
             <p>
-              O laboratório desenvolve pesquisa aplicada em transportes, mobilidade urbana,
-              infraestrutura e impactos ambientais. A proposta é transformar dados em soluções
-              para cidades mais eficientes e sustentáveis.
+              O TRAMA reúne professores, pesquisadores e estudantes para desenvolver estudos
+              aplicados em transportes, logística urbana, infraestrutura viária, segurança e
+              sustentabilidade. A proposta é simples: transformar dados e métodos em decisões mais
+              qualificadas para a universidade e para a sociedade.
             </p>
             <a href="../index.html" class="btn-outline">Voltar para a página inicial</a>
           </div>
-          <div class="about-image-wrap about-image-wrap--subtle-border">
-            <img class="about-image" src="../assets/images/imagem-curculo.webp" alt="Círculo urbano TRAMA" />
+          <div class="about-panel">
+            <div class="about-panel__card">
+              <span class="about-panel__label">Missão</span>
+              <p>Produzir conhecimento técnico-científico com impacto em políticas, projetos e formação.</p>
+            </div>
+            <div class="about-panel__card">
+              <span class="about-panel__label">Visão</span>
+              <p>Ser referência nacional em pesquisa aplicada sobre mobilidade, ambiente e planejamento.</p>
+            </div>
+            <div class="about-panel__card">
+              <span class="about-panel__label">Valores</span>
+              <p>Rigor metodológico, colaboração, transparência, inovação e compromisso público.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <div class="cards-grid">
-            <article class="card-overlay">
-              <img src="../assets/images/infraestrutura-de-transporte-734x490.jpg" alt="Pesquisa aplicada em infraestrutura" />
-              <div class="card-content">
-                <h3>Missão</h3>
-                <p>Produzir conhecimento técnico e científico para orientar políticas e projetos de mobilidade.</p>
-              </div>
+          <div class="section-kicker">
+            <p class="page-hero__eyebrow">Como trabalhamos</p>
+            <h2>Pesquisa aplicada com linguagem clara e resultado compartilhável</h2>
+            <p class="galeria-sub">
+              Cada projeto conecta análise acadêmica, dados de campo e interlocução com parceiros.
+            </p>
+          </div>
+          <div class="about-values-grid">
+            <article class="about-value-card">
+              <span>01</span>
+              <h3>Formação</h3>
+              <p>Treinamos estudantes em métodos, ferramentas e interpretação crítica de dados urbanos.</p>
             </article>
-            <article class="card-overlay">
-              <img src="../assets/images/ft-08-gestao-da-logistica-de-distribuicao-dos-transportes-1583331295.jpg" alt="Pesquisa aplicada em logística" />
-              <div class="card-content">
-                <h3>Visão</h3>
-                <p>Ser referência nacional em transporte, meio ambiente e planejamento urbano orientado por dados.</p>
-              </div>
+            <article class="about-value-card">
+              <span>02</span>
+              <h3>Pesquisa</h3>
+              <p>Produzimos diagnósticos e cenários para apoiar decisões em transportes e infraestrutura.</p>
+            </article>
+            <article class="about-value-card">
+              <span>03</span>
+              <h3>Extensão</h3>
+              <p>Levamos resultados para a gestão pública, eventos, relatórios técnicos e materiais de apoio.</p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contato">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <p class="page-hero__eyebrow">Contato</p>
+            <h2>Quer conversar com o TRAMA?</h2>
+            <p>
+              Estamos abertos a propostas de pesquisa, parcerias acadêmicas, convites para eventos e
+              oportunidades de colaboração com órgãos públicos e iniciativas privadas.
+            </p>
+            <div class="contact-cards">
+              <article class="contact-card">
+                <strong>E-mail</strong>
+                <a href="mailto:trama@ufc.br">trama@ufc.br</a>
+              </article>
+              <article class="contact-card">
+                <strong>Telefone</strong>
+                <a href="tel:+5585999991234">+55 (85) 99999-1234</a>
+              </article>
+              <article class="contact-card">
+                <strong>Endereço</strong>
+                <p>Campus Central - Bloco 7, Sala 204, Fortaleza - CE</p>
+              </article>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <div class="contact-form__header">
+              <p class="page-hero__eyebrow">Mensagem rápida</p>
+              <h3>Envie sua proposta ou dúvida</h3>
+            </div>
+            <label>
+              Nome
+              <input type="text" name="nome" placeholder="Seu nome" />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" placeholder="voce@instituicao.br" />
+            </label>
+            <label>
+              Assunto
+              <input type="text" name="assunto" placeholder="Parceria, projeto, convite..." />
+            </label>
+            <label>
+              Mensagem
+              <textarea name="mensagem" rows="5" placeholder="Conte um pouco sobre o que você precisa."></textarea>
+            </label>
+            <button type="submit" class="btn-outline">Enviar mensagem</button>
+          </form>
         </div>
       </section>
     </main>

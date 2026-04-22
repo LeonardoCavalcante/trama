@@ -38,40 +38,136 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero" style="min-height: 52vh;">
-        <div class="hero-overlay"></div>
-        <img class="hero-bg" src="../assets/images/imagem-fundo-inicial.png" alt="Contexto urbano" />
-        <div class="hero-content container">
-          <h1 class="hero-title"><img src="../assets/images/logo-trama-imagens.png" alt="TRAMA" /></h1>
+    <main class="parceiros-page">
+      <section class="page-hero page-hero--partners">
+        <img class="page-hero__bg" src="../assets/images/imagem-fundo-inicial.png" alt="Vista aérea de uma via urbana com árvores" />
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content container">
+          <p class="page-hero__eyebrow">Rede acadêmica e institucional</p>
+          <h1>Parcerias que ampliam o alcance do TRAMA</h1>
+          <p>
+            Conectamos universidade, setor público e redes técnicas para transformar pesquisa em
+            projetos com impacto real em mobilidade, infraestrutura e planejamento urbano.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn-outline" href="#rede">Ver rede</a>
+            <a class="btn-outline" href="sobre.html#contato">Entrar em contato</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container partners-intro">
+          <div class="split partners-intro__split">
+            <div>
+              <h2>Colaboração com foco acadêmico e aplicação prática</h2>
+              <p>
+                O TRAMA articula pós-graduação, laboratórios, prefeituras, agências de fomento e
+                entidades técnicas para construir diagnósticos, testar soluções e acompanhar
+                políticas públicas com rigor científico.
+              </p>
+            </div>
+            <div class="partner-metrics" aria-label="Indicadores de colaboração">
+              <article class="partner-metric">
+                <strong>+20</strong>
+                <span>frentes de pesquisa e cooperação</span>
+              </article>
+              <article class="partner-metric">
+                <strong>4</strong>
+                <span>setores integrados: ensino, pesquisa, extensão e gestão</span>
+              </article>
+              <article class="partner-metric">
+                <strong>100%</strong>
+                <span>de foco em soluções aplicadas e mensuráveis</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="rede">
+        <div class="container">
+          <div class="section-kicker">
+            <p class="page-hero__eyebrow">Rede TRAMA</p>
+            <h2>Instituições, redes e parceiros estratégicos</h2>
+            <p class="galeria-sub">
+              Um conjunto de apoios acadêmicos e institucionais que sustenta a atuação do laboratório.
+            </p>
+          </div>
+
+          <div class="partner-grid">
+            <article class="partner-card partner-card--featured">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" alt="Campus universitário em um dia ensolarado" />
+              <div class="partner-card__content">
+                <span class="partner-tag">Universidade</span>
+                <h3>UFC e rede de pós-graduação</h3>
+                <p>
+                  Base institucional para formação de pesquisadores, orientação técnica e articulação
+                  com grupos de excelência.
+                </p>
+              </div>
+            </article>
+
+            <article class="partner-card">
+              <img src="https://placehold.co/640x360/png?text=CNPq" alt="Mock de apoio institucional CNPq" />
+              <div class="partner-card__content">
+                <span class="partner-tag">Fomento</span>
+                <h3>CNPq e agências de apoio</h3>
+                <p>Financiamento, bolsas e incentivo para pesquisa aplicada em mobilidade e infraestrutura.</p>
+              </div>
+            </article>
+
+            <article class="partner-card">
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Equipe analisando dados em notebooks" />
+              <div class="partner-card__content">
+                <span class="partner-tag">Pesquisa</span>
+                <h3>Laboratórios e grupos de estudo</h3>
+                <p>Troca de métodos, bases de dados e soluções para projetos multicampi e interdisciplinares.</p>
+              </div>
+            </article>
+
+            <article class="partner-card">
+              <img src="https://placehold.co/640x360/png?text=Prefeitura" alt="Mock de parceria com prefeitura" />
+              <div class="partner-card__content">
+                <span class="partner-tag">Gestão pública</span>
+                <h3>Prefeituras e órgãos gestores</h3>
+                <p>Colaboração para planejamento urbano, transporte coletivo e avaliação de políticas públicas.</p>
+              </div>
+            </article>
+
+            <article class="partner-card">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Reunião de equipe em ambiente acadêmico moderno" />
+              <div class="partner-card__content">
+                <span class="partner-tag">Rede técnica</span>
+                <h3>Entidades e conselhos setoriais</h3>
+                <p>Debate qualificado com organizações que conectam a universidade ao mercado e à gestão.</p>
+              </div>
+            </article>
+
+            <article class="partner-card">
+              <img src="https://placehold.co/640x360/png?text=ANTP+%2F+Rede" alt="Mock de rede técnica e associação setorial" />
+              <div class="partner-card__content">
+                <span class="partner-tag">Extensão</span>
+                <h3>Associações e redes de mobilidade</h3>
+                <p>Eventos, cursos e publicações que ampliam o alcance dos resultados para a sociedade.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2>Parceiros</h2>
-          <p class="galeria-sub">Instituições acadêmicas, órgãos públicos e entidades que apoiam o trabalho do laboratório.</p>
-          <div class="research-grid">
-            <article class="research-item">
-              <div class="research-icon"><img src="../assets/images/brasao1_horizontal_cor_300dpi.png" alt="UFC" /></div>
-              <h3 class="research-title">Universidade</h3>
-              <p class="research-desc">Base acadêmica e institucional que sustenta a pesquisa e a formação no laboratório.</p>
-            </article>
-            <article class="research-item">
-              <div class="research-icon"><img src="../assets/images/logo-trama.svg" alt="TRAMA" /></div>
-              <h3 class="research-title">Pesquisa aplicada</h3>
-              <p class="research-desc">Parcerias que conectam ciência, engenharia, planejamento e impacto territorial.</p>
-            </article>
-            <article class="research-item">
-              <div class="research-icon"><img src="../assets/images/logo-trama.png" alt="Rede de trabalho" /></div>
-              <h3 class="research-title">Rede técnica</h3>
-              <p class="research-desc">Interlocução com equipes, secretarias e grupos temáticos para produzir soluções reais.</p>
-            </article>
-            <article class="research-item">
-              <div class="research-icon"><img src="../assets/images/logo-trama-imagens.png" alt="Extensão" /></div>
-              <h3 class="research-title">Extensão</h3>
-              <p class="research-desc">Aproximação com sociedade e gestão pública para transformar conhecimento em ação.</p>
-            </article>
+          <div class="collab-banner">
+            <div>
+              <p class="page-hero__eyebrow">Quer colaborar?</p>
+              <h2>Vamos construir uma agenda conjunta para pesquisa e extensão.</h2>
+              <p>
+                Se você representa uma instituição acadêmica, órgão público ou rede técnica, envie uma
+                proposta e vamos avaliar possibilidades de cooperação.
+              </p>
+            </div>
+            <a href="sobre.html#contato" class="btn-outline">Falar com a equipe</a>
           </div>
         </div>
       </section>

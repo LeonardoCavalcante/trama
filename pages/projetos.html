@@ -38,35 +38,158 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero" style="min-height: 52vh;">
-        <div class="hero-overlay"></div>
-        <img class="hero-bg" src="../assets/images/infraestrutura-de-transporte-734x490.jpg" alt="Projeto de infraestrutura em destaque" />
-        <div class="hero-content container">
-          <h1 class="hero-title"><img src="../assets/images/logo-trama-imagens.png" alt="TRAMA" /></h1>
+    <main class="projetos-page">
+      <section class="page-hero page-hero--projects">
+        <img class="page-hero__bg" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80" alt="Campus universitário com arquitetura contemporânea" />
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content container">
+          <p class="page-hero__eyebrow">Pesquisa aplicada</p>
+          <h1>Projetos em andamento com cara de pós-graduação moderna</h1>
+          <p>
+            Um panorama visual das frentes do TRAMA em infraestrutura, mobilidade, logística urbana e
+            apoio à decisão baseado em dados.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn-outline" href="#destaques">Ver destaques</a>
+            <a class="btn-outline" href="publicacoes.html">Publicações ligadas aos projetos</a>
+          </div>
         </div>
       </section>
 
       <section class="section">
+        <div class="container project-layout" id="destaques">
+          <article class="project-highlight">
+            <img src="../assets/images/imagem-fundo-inicial.png" alt="Vista aérea de uma via urbana com árvores" />
+            <div class="project-highlight__content">
+              <p class="project-pill">Projeto em evidência</p>
+              <h2>Plataforma de indicadores para mobilidade e ambiente urbano</h2>
+              <p>
+                Integra bases georreferenciadas, dados operacionais e análises ambientais para apoiar
+                a leitura de cenários e a priorização de intervenções em cidades médias e capitais.
+              </p>
+              <div class="project-metrics">
+                <div class="project-metric">
+                  <strong>4</strong>
+                  <span>camadas de dados integradas</span>
+                </div>
+                <div class="project-metric">
+                  <strong>12</strong>
+                  <span>indicadores para tomada de decisão</span>
+                </div>
+                <div class="project-metric">
+                  <strong>100%</strong>
+                  <span>foco em uso público e acadêmico</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="project-side-panel">
+            <div class="project-side-panel__card">
+              <span class="project-pill">Linha de pesquisa</span>
+              <h3>Infraestrutura, logística e operações urbanas</h3>
+              <p>Mapeamento, avaliação e propostas de melhoria com base em campo, dados e simulação.</p>
+            </div>
+            <div class="project-side-panel__card">
+              <span class="project-pill">Status</span>
+              <h3>Em coleta e modelagem</h3>
+              <p>Os projetos avançam com cronogramas curtos, entregas iterativas e validação com parceiros.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--project-cards">
         <div class="container">
-          <h2>Projetos</h2>
-          <p class="galeria-sub">Iniciativas em andamento com foco em transporte, ambiente e operação urbana.</p>
-          <div class="cards-grid">
-            <article class="card-overlay">
-              <img src="../assets/images/infraestrutura-de-transporte-734x490.jpg" alt="Projeto de infraestrutura urbana" />
-              <div class="card-content">
-                <h3>Infraestrutura Urbana</h3>
-                <p>Estudos sobre materiais, pavimentos e desempenho térmico em vias urbanas.</p>
-                <a href="#" class="card-btn">Detalhes</a>
+          <div class="section-kicker">
+            <p class="page-hero__eyebrow">Portfólio</p>
+            <h2>Frentes de trabalho visualmente organizadas</h2>
+            <p class="galeria-sub">
+              Cards com imagem, status e tema para dar leitura rápida ao conteúdo acadêmico.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" alt="Prédio universitário e paisagismo" />
+              <div class="project-card__content">
+                <span class="project-pill">Infraestrutura</span>
+                <h3>Pavimentos, conforto térmico e requalificação viária</h3>
+                <p>Ensaios, diagnósticos e recomendações para vias urbanas com melhor desempenho e durabilidade.</p>
+                <div class="project-tags">
+                  <span>pavimentação</span>
+                  <span>clima urbano</span>
+                  <span>desempenho</span>
+                </div>
               </div>
             </article>
-            <article class="card-overlay">
-              <img src="../assets/images/ft-08-gestao-da-logistica-de-distribuicao-dos-transportes-1583331295.jpg" alt="Projeto de logística urbana" />
-              <div class="card-content">
-                <h3>Logística Urbana</h3>
-                <p>Modelagem de fluxos e distribuição para melhorar eficiência e reduzir impactos.</p>
-                <a href="#" class="card-btn">Detalhes</a>
+
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Equipe com notebooks e gráficos de dados" />
+              <div class="project-card__content">
+                <span class="project-pill">Logística</span>
+                <h3>Distribuição urbana e última milha</h3>
+                <p>Modelagem de fluxos, rotas e cenários para reduzir custos, emissões e conflitos operacionais.</p>
+                <div class="project-tags">
+                  <span>roteamento</span>
+                  <span>eficiência</span>
+                  <span>emissões</span>
+                </div>
               </div>
+            </article>
+
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?auto=format&fit=crop&w=1200&q=80" alt="Mesa com discussão de projeto colaborativo" />
+              <div class="project-card__content">
+                <span class="project-pill">Mobilidade</span>
+                <h3>Transporte coletivo, acessibilidade e integração modal</h3>
+                <p>Leituras sobre rede de transportes, acessibilidade e apoio à reestruturação de serviços urbanos.</p>
+                <div class="project-tags">
+                  <span>acessibilidade</span>
+                  <span>rede</span>
+                  <span>política pública</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1200&q=80" alt="Cidade vista de cima com avenidas e quadras" />
+              <div class="project-card__content">
+                <span class="project-pill">Território</span>
+                <h3>Planejamento urbano, uso do solo e expansão da cidade</h3>
+                <p>Integração entre transporte, ocupação do território e indicadores para orientar decisões urbanas.</p>
+                <div class="project-tags">
+                  <span>planejamento</span>
+                  <span>território</span>
+                  <span>dados</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container project-roadmap">
+          <div>
+            <p class="page-hero__eyebrow">Fluxo de trabalho</p>
+            <h2>Da pergunta de pesquisa ao resultado público</h2>
+          </div>
+          <div class="project-roadmap__steps">
+            <article>
+              <span>01</span>
+              <h3>Leitura do problema</h3>
+              <p>Definição do recorte urbano, coleta inicial e alinhamento com parceiros.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Modelagem e testes</h3>
+              <p>Análise técnica, validação dos dados e construção de cenários comparáveis.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Entrega e difusão</h3>
+              <p>Relatórios, artigos, seminários e materiais abertos para apoiar a tomada de decisão.</p>
             </article>
           </div>
         </div>
