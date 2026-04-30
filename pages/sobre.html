@@ -21,13 +21,22 @@
           <img class="trama-logo" src="../assets/images/logo-trama.png" alt="TRAMA" />
         </a>
         <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
-        <nav class="site-nav" aria-label="Navegacao principal">
+        <nav class="site-nav" aria-label="Navegação principal">
           <a href="../index.html">Inicio</a>
-          <a href="sobre.html">Sobre</a>
+          <div class="site-nav__item">
+            <button class="site-nav__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Sobre</button>
+            <div class="site-nav__dropdown" aria-label="Submenu sobre">
+              <a href="sobre.html">Visão geral</a>
+              <a href="infraestrutura.html">Infraestrutura</a>
+              <a href="planejamento.html">Planejamento</a>
+            </div>
+          </div>
           <a href="pessoas.html">Pessoas</a>
           <div class="site-nav__item">
             <button class="site-nav__dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Pesquisa</button>
             <div class="site-nav__dropdown" aria-label="Submenu de pesquisa">
+              <a href="infraestrutura.html">Infraestrutura</a>
+              <a href="planejamento.html">Planejamento</a>
               <a href="projetos.html">Projetos</a>
               <a href="publicacoes.html">Publicações</a>
             </div>
@@ -67,7 +76,6 @@
               sustentabilidade. A proposta é simples: transformar dados e métodos em decisões mais
               qualificadas para a universidade e para a sociedade.
             </p>
-            <a href="../index.html" class="btn-outline">Voltar para a página inicial</a>
           </div>
           <div class="about-panel">
             <div class="about-panel__card">
@@ -112,6 +120,199 @@
               <p>Levamos resultados para a gestão pública, eventos, relatórios técnicos e materiais de apoio.</p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section timeline-section">
+        <div class="container">
+          <div class="section-kicker">
+            <p class="page-hero__eyebrow">Linha do tempo</p>
+            <h2>Marcos do TRAMA (protótipo)</h2>
+            <p class="galeria-sub">Estrutura inicial para apresentar a evolução do laboratório.</p>
+          </div>
+          <div class="timeline-shell" aria-label="Linha do tempo do TRAMA">
+            <div class="timeline-scroll">
+              <div class="timeline-track" role="list">
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&w=900&q=80" alt="Primeiras frentes de pesquisa" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2016</p>
+                    <h3>Início das pesquisas integradas</h3>
+                    <p>Primeiras frentes combinando transporte, ambiente e dados urbanos.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Primeiras campanhas de campo" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2016</p>
+                    <h3>Primeiras campanhas de campo</h3>
+                    <p>Levantamentos iniciais e calibracao de protocolos de coleta.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="Base de dados inicial" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2016</p>
+                    <h3>Base de dados inicial</h3>
+                    <p>Primeiros bancos georreferenciados para analises urbanas.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Primeiros relatorios" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2016</p>
+                    <h3>Primeiros relatorios tecnicos</h3>
+                    <p>Relatorios de apoio a decisao em mobilidade e infraestrutura.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=80" alt="Primeiras parcerias" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2017</p>
+                    <h3>Primeiras parcerias estratégicas</h3>
+                    <p>Convênios e cooperação técnica para projetos em mobilidade urbana.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="Ciclos de dados" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2018</p>
+                    <h3>Ciclos de dados urbanos</h3>
+                    <p>Primeiros levantamentos sistemáticos e bases georreferenciadas.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Infraestrutura e mobilidade ativa" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2019</p>
+                    <h3>Expansão para mobilidade ativa</h3>
+                    <p>Projetos focados em caminhabilidade, ciclabilidade e segurança viária.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Crescimento da equipe" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2020</p>
+                    <h3>Crescimento da equipe</h3>
+                    <p>Entrada de novos pesquisadores e ampliação das frentes temáticas.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Metodologias aplicadas" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2021</p>
+                    <h3>Metodologias aplicadas</h3>
+                    <p>Protocolos de campo e relatórios técnicos para tomada de decisão.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80" alt="Parcerias e logística urbana" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2022</p>
+                    <h3>Laboratório em rede</h3>
+                    <p>Parcerias com universidades e órgãos públicos para projetos aplicados.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Monitoramento urbano" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2023</p>
+                    <h3>Monitoramento urbano contínuo</h3>
+                    <p>Indicadores para avaliar desempenho de infraestruturas e serviços.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="Laboratorio integrado" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2024</p>
+                    <h3>Laboratório integrado</h3>
+                    <p>Integração das áreas de infraestrutura, logística e meio ambiente.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80" alt="Redes e difusao" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2025</p>
+                    <h3>Redes e difusão científica</h3>
+                    <p>Produção de relatórios e disseminação de boas práticas.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Projetos em infraestrutura" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2022</p>
+                    <h3>Projetos em infraestrutura</h3>
+                    <p>Ampliação das frentes em pavimentação e resiliência urbana.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80" alt="Indicadores e plataformas" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2026</p>
+                    <h3>Plataformas e indicadores</h3>
+                    <p>Integração de dados e monitoramento para apoiar decisões urbanas.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              <article class="timeline-event" role="listitem">
+                <div class="timeline-card">
+                  <img class="timeline-image" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Capacitacao e publicacoes" />
+                  <div class="timeline-content">
+                    <p class="timeline-year">2026</p>
+                    <h3>Capacitação e publicações</h3>
+                    <p>Fortalecimento de formações e difusão de resultados aplicados.</p>
+                  </div>
+                </div>
+                <span class="timeline-dot" aria-hidden="true"></span>
+              </article>
+              </div>
+            </div>
+          </div>
+          <p class="timeline-note">Conteúdos e datas podem ser ajustados conforme validação.</p>
         </div>
       </section>
 

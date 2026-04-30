@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRAMA | Publicações</title>
-    <meta name="description" content="Publicações do laboratório TRAMA" />
+    <title>TRAMA | Infraestrutura</title>
+    <meta name="description" content="Pesquisa em infraestrutura e pavimentação no TRAMA" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -21,7 +21,7 @@
           <img class="trama-logo" src="../assets/images/logo-trama.png" alt="TRAMA" />
         </a>
         <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
-        <nav class="site-nav" aria-label="Navegacao principal">
+        <nav class="site-nav" aria-label="Navegação principal">
           <a href="../index.html">Inicio</a>
           <a href="sobre.html">Sobre</a>
           <a href="pessoas.html">Pessoas</a>
@@ -40,61 +40,77 @@
       </div>
     </header>
 
-    <main class="publicacoes-page">
-      <section class="publicacoes-hero" aria-label="Capa da página de publicações">
-        <img class="publicacoes-hero__bg" src="../assets/images/imagem-fundo-inicial.png" alt="Vista aérea de via urbana com árvores" />
-        <div class="publicacoes-hero__overlay"></div>
-        <div class="container publicacoes-hero__content">
-          <h1>Publicações</h1>
-          <p>Trama | Transportes e Meio Ambiente</p>
+    <main class="infra-page">
+      <section class="page-hero">
+        <img class="page-hero__bg" src="../assets/images/infraestrutura-de-transporte-734x490.jpg" alt="Infraestrutura de transporte" />
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content container">
+          <p class="page-hero__eyebrow">Infraestrutura e materiais</p>
+          <h1>Infraestrutura que sustenta cidades mais resilientes</h1>
+          <p>
+            Pesquisamos pavimentação, materiais urbanos e desempenho térmico para apoiar decisões
+            técnicas em obras, manutenção e adaptação climática.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn-outline" href="#questoes">Linhas de pesquisa</a>
+            <a class="btn-outline" href="projetos.html">Ver projetos</a>
+          </div>
         </div>
       </section>
 
-      <section class="publicacoes-lista section" aria-label="Lista anual de publicações">
-        <div class="container publicacoes-wrap">
-          <section class="publicacoes-ano" aria-labelledby="ano-2025">
-            <h2 id="ano-2025">2025</h2>
+      <section class="section">
+        <div class="container split">
+          <div>
+            <p class="page-hero__eyebrow">O que investigamos</p>
+            <h2>Materiais, desempenho e manutenção inteligente</h2>
+            <p>
+              O TRAMA monitora comportamento de pavimentos, ilhas de calor e técnicas de mitigação.
+              Os estudos ajudam a definir especificações, priorizar intervenções e reduzir impactos
+              ambientais associados a infraestrutura viária.
+            </p>
+          </div>
+          <div class="about-panel">
+            <div class="about-panel__card">
+              <span class="about-panel__label">Foco</span>
+              <p>Materiais, térmica urbana, drenagem e resiliência.</p>
+            </div>
+            <div class="about-panel__card">
+              <span class="about-panel__label">Métodos</span>
+              <p>Sensoriamento remoto, ensaios laboratoriais e dados de campo.</p>
+            </div>
+            <div class="about-panel__card">
+              <span class="about-panel__label">Aplicação</span>
+              <p>Suporte técnico para projetos, manutenção e políticas públicas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do artigo de 2025">[Download]</a>
-                <a href="#" aria-label="Resumo do artigo de 2025">[Resumo]</a>
-              </p>
+      <section class="questoes section" id="questoes">
+        <div class="container">
+          <h2>Linhas de pesquisa</h2>
+          <div class="research-grid">
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-calor.svg" alt="Ilhas de Calor" /></div>
+              <h3 class="research-title">Ilhas de Calor Urbano</h3>
+              <p class="research-desc">Mapeamento de pontos críticos e estratégias de mitigação com vegetação e materiais refletivos.</p>
             </article>
-
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do segundo artigo de 2025">[Download]</a>
-                <a href="#" aria-label="Resumo do segundo artigo de 2025">[Resumo]</a>
-              </p>
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-calor.svg" alt="Materiais e Pavimentação" /></div>
+              <h3 class="research-title">Materiais e Pavimentação</h3>
+              <p class="research-desc">Novas tecnologias de pavimento para reduzir absorção térmica e aumentar durabilidade.</p>
             </article>
-          </section>
-
-          <section class="publicacoes-ano" aria-labelledby="ano-2024">
-            <h2 id="ano-2024">2024</h2>
-
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do primeiro artigo de 2024">[Download]</a>
-                <a href="#" aria-label="Resumo do primeiro artigo de 2024">[Resumo]</a>
-              </p>
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-calor.svg" alt="Infraestrutura Resiliente" /></div>
+              <h3 class="research-title">Infraestrutura Resiliente</h3>
+              <p class="research-desc">Projetos adaptativos para enfrentar eventos extremos e reduzir riscos urbanos.</p>
             </article>
-
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do segundo artigo de 2024">[Download]</a>
-                <a href="#" aria-label="Resumo do segundo artigo de 2024">[Resumo]</a>
-              </p>
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-co2.svg" alt="Sensoriamento Remoto" /></div>
+              <h3 class="research-title">Sensoriamento Remoto</h3>
+              <p class="research-desc">Uso de imagens e sensores para diagnóstico de superfícies e padrões térmicos.</p>
             </article>
-          </section>
+          </div>
         </div>
       </section>
     </main>

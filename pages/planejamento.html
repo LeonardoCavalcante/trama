@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRAMA | Publicações</title>
-    <meta name="description" content="Publicações do laboratório TRAMA" />
+    <title>TRAMA | Planejamento</title>
+    <meta name="description" content="Pesquisa em planejamento e operação de transportes no TRAMA" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -21,7 +21,7 @@
           <img class="trama-logo" src="../assets/images/logo-trama.png" alt="TRAMA" />
         </a>
         <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
-        <nav class="site-nav" aria-label="Navegacao principal">
+        <nav class="site-nav" aria-label="Navegação principal">
           <a href="../index.html">Inicio</a>
           <a href="sobre.html">Sobre</a>
           <a href="pessoas.html">Pessoas</a>
@@ -40,61 +40,76 @@
       </div>
     </header>
 
-    <main class="publicacoes-page">
-      <section class="publicacoes-hero" aria-label="Capa da página de publicações">
-        <img class="publicacoes-hero__bg" src="../assets/images/imagem-fundo-inicial.png" alt="Vista aérea de via urbana com árvores" />
-        <div class="publicacoes-hero__overlay"></div>
-        <div class="container publicacoes-hero__content">
-          <h1>Publicações</h1>
-          <p>Trama | Transportes e Meio Ambiente</p>
+    <main class="planejamento-page">
+      <section class="page-hero">
+        <img class="page-hero__bg" src="../assets/images/ft-08-gestao-da-logistica-de-distribuicao-dos-transportes-1583331295.jpg" alt="Planejamento e operação de transportes" />
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content container">
+          <p class="page-hero__eyebrow">Planejamento e operação</p>
+          <h1>Planejamento que conecta mobilidade, ambiente e decisão</h1>
+          <p>
+            Atuamos na leitura de cenários, modelagem de demanda e indicadores para orientar
+            políticas de transporte, logística urbana e mobilidade ativa.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn-outline" href="#questoes">Linhas de pesquisa</a>
+            <a class="btn-outline" href="projetos.html">Ver projetos</a>
+          </div>
         </div>
       </section>
 
-      <section class="publicacoes-lista section" aria-label="Lista anual de publicações">
-        <div class="container publicacoes-wrap">
-          <section class="publicacoes-ano" aria-labelledby="ano-2025">
-            <h2 id="ano-2025">2025</h2>
+      <section class="section">
+        <div class="container split">
+          <div>
+            <p class="page-hero__eyebrow">O que investigamos</p>
+            <h2>Planejamento integrado para sistemas urbanos</h2>
+            <p>
+              Estudos sobre operação, mobilidade ativa e logística ajudam a formular estratégias
+              de redução de emissões, melhoria de serviços e tomada de decisão baseada em dados.
+            </p>
+          </div>
+          <div class="about-panel">
+            <div class="about-panel__card">
+              <span class="about-panel__label">Foco</span>
+              <p>Planejamento, operação, logística urbana e segurança viária.</p>
+            </div>
+            <div class="about-panel__card">
+              <span class="about-panel__label">Métodos</span>
+              <p>Modelagem de demanda, simulação e avaliação de políticas.</p>
+            </div>
+            <div class="about-panel__card">
+              <span class="about-panel__label">Aplicação</span>
+              <p>Indicadores e apoio a decisão para gestores públicos e privados.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do artigo de 2025">[Download]</a>
-                <a href="#" aria-label="Resumo do artigo de 2025">[Resumo]</a>
-              </p>
+      <section class="questoes section" id="questoes">
+        <div class="container">
+          <h2>Linhas de pesquisa</h2>
+          <div class="research-grid">
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-co2.svg" alt="Emissões de CO2" /></div>
+              <h3 class="research-title">Emissões de CO2</h3>
+              <p class="research-desc">Mapeamento de emissões veiculares e avaliação de medidas de descarbonização.</p>
             </article>
-
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do segundo artigo de 2025">[Download]</a>
-                <a href="#" aria-label="Resumo do segundo artigo de 2025">[Resumo]</a>
-              </p>
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-co2.svg" alt="Qualidade do Ar" /></div>
+              <h3 class="research-title">Qualidade do Ar</h3>
+              <p class="research-desc">Monitoramento de poluentes e impactos na saúde associados ao transporte.</p>
             </article>
-          </section>
-
-          <section class="publicacoes-ano" aria-labelledby="ano-2024">
-            <h2 id="ano-2024">2024</h2>
-
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do primeiro artigo de 2024">[Download]</a>
-                <a href="#" aria-label="Resumo do primeiro artigo de 2024">[Resumo]</a>
-              </p>
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-calor.svg" alt="Mobilidade Ativa" /></div>
+              <h3 class="research-title">Mobilidade Ativa</h3>
+              <p class="research-desc">Infraestrutura para pedestres e ciclistas com foco em segurança e eficiência.</p>
             </article>
-
-            <article class="publicacao-item">
-              <h3>Asphalt emissions in paving production, transportation, placement and in-service temperature conditions</h3>
-              <p>Ribas et. al, Road Materials and Pavement Design, 2025.</p>
-              <p class="publicacao-links">
-                <a href="#" aria-label="Download do segundo artigo de 2024">[Download]</a>
-                <a href="#" aria-label="Resumo do segundo artigo de 2024">[Resumo]</a>
-              </p>
+            <article class="research-item">
+              <div class="research-icon"><img src="../assets/icons/icon-calor.svg" alt="Logística Urbana" /></div>
+              <h3 class="research-title">Logística Urbana</h3>
+              <p class="research-desc">Otimização de rotas e consolidação de cargas para reduzir impactos urbanos.</p>
             </article>
-          </section>
+          </div>
         </div>
       </section>
     </main>
