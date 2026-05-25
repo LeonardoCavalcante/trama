@@ -1,0 +1,25 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs e arquivos temporarios
+*.log
+*.tmp
+*.bak
+
+# Dependencias (caso algum dia o projeto adote build)
+node_modules/
+dist/
+build/
+
+# Ambiente local
+.env
+.env.local
