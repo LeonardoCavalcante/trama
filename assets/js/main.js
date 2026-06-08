@@ -530,10 +530,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const SVG_NS = 'http://www.w3.org/2000/svg';
       const XLINK_NS = 'http://www.w3.org/1999/xlink';
 
-      const addFlag = (iso, isHome) => {
+      // centro do maior path (continente principal) de um país, no sistema do SVG
+      const getCentroid = (iso) => {
         const els = svg.querySelectorAll('[id="' + iso + '"]');
-        if (!els.length) return;
-        // pick the largest path (mainland) as anchor
+        if (!els.length) return null;
         let main = els[0];
         let maxArea = 0;
         els.forEach((el) => {
@@ -542,17 +542,32 @@ document.addEventListener('DOMContentLoaded', () => {
           const area = bb.width * bb.height;
           if (area > maxArea) { main = el; maxArea = area; }
         });
-        if (typeof main.getBBox !== 'function') return;
+        if (typeof main.getBBox !== 'function') return null;
         const bb = main.getBBox();
+        return { x: bb.x + bb.width / 2, y: bb.y + bb.height / 2, w: bb.width, h: bb.height };
+      };
+
+      // ponto onde a bandeira/arco é ancorado; a sede (Brasil) vai para o
+      // Nordeste (~Fortaleza), e não para o centro geográfico do país
+      const getAnchor = (iso) => {
+        const c = getCentroid(iso);
+        if (!c) return null;
+        if (iso === homeIso) {
+          return { x: c.x + c.w * 0.22, y: c.y - c.h * 0.30 };
+        }
+        return { x: c.x, y: c.y };
+      };
+
+      const addFlag = (iso, isHome) => {
+        const c = getAnchor(iso);
+        if (!c) return;
         const w = isHome ? 22 : 18;
         const h = w * 3 / 4;
-        const cx = bb.x + bb.width / 2;
-        const cy = bb.y + bb.height / 2;
         const img = document.createElementNS(SVG_NS, 'image');
         img.setAttributeNS(XLINK_NS, 'href', 'https://flagcdn.com/' + iso.toLowerCase() + '.svg');
         img.setAttribute('href', 'https://flagcdn.com/' + iso.toLowerCase() + '.svg');
-        img.setAttribute('x', cx - w / 2);
-        img.setAttribute('y', cy - h / 2);
+        img.setAttribute('x', c.x - w / 2);
+        img.setAttribute('y', c.y - h / 2);
         img.setAttribute('width', w);
         img.setAttribute('height', h);
         img.setAttribute('class', isHome ? 'world-flag world-flag--home' : 'world-flag');
@@ -560,16 +575,39 @@ document.addEventListener('DOMContentLoaded', () => {
         svg.appendChild(img);
       };
 
-      const markCountry = (iso, cls, isHome) => {
+      const markCountry = (iso, cls) => {
         if (!iso) return;
         svg.querySelectorAll('[id="' + iso + '"]').forEach((el) => el.classList.add(cls));
-        addFlag(iso, isHome);
       };
 
-      partnerIsos.forEach((iso) => markCountry(iso, 'is-partner', false));
-      markCountry(homeIso, 'is-home', true);
+      partnerIsos.forEach((iso) => markCountry(iso, 'is-partner'));
+      markCountry(homeIso, 'is-home');
 
-      if (!tooltip) return;
+      // arcos ligando a sede (Brasil) a cada país parceiro
+      const home = getAnchor(homeIso);
+      if (home) {
+        const arcLayer = document.createElementNS(SVG_NS, 'g');
+        arcLayer.setAttribute('class', 'world-arcs');
+        arcLayer.setAttribute('pointer-events', 'none');
+        partnerIsos.forEach((iso, i) => {
+          const p = getCentroid(iso);
+          if (!p) return;
+          const mx = (home.x + p.x) / 2;
+          const my = (home.y + p.y) / 2;
+          const dist = Math.hypot(p.x - home.x, p.y - home.y);
+          const ctrlY = my - dist * 0.28; // levanta o controle para curvar o arco
+          const path = document.createElementNS(SVG_NS, 'path');
+          path.setAttribute('d', 'M ' + home.x + ' ' + home.y + ' Q ' + mx + ' ' + ctrlY + ' ' + p.x + ' ' + p.y);
+          path.setAttribute('class', 'world-arc');
+          path.style.setProperty('--arc-delay', (i * 0.25) + 's');
+          arcLayer.appendChild(path);
+        });
+        svg.appendChild(arcLayer);
+      }
+
+      // bandeiras por cima dos arcos
+      partnerIsos.forEach((iso) => addFlag(iso, false));
+      addFlag(homeIso, true);
 
       const showTooltip = (event, name) => {
         if (!name) return;
@@ -631,13 +669,127 @@ document.addEventListener('DOMContentLoaded', () => {
         WF:'Wallis e Futuna',EH:'Saara Ocidental',YE:'Iêmen',ZM:'Zâmbia',ZW:'Zimbábue'
       };
 
+      // instituições parceiras agrupadas por país (lidas dos cards de logo)
+      const nameToIso = {};
+      Object.keys(ptNames).forEach((iso) => { nameToIso[ptNames[iso].toLowerCase()] = iso; });
+      const institutionsByIso = {};
+      document.querySelectorAll('[data-partner]').forEach((tile) => {
+        const iso = nameToIso[(tile.dataset.pais || '').toLowerCase()];
+        if (!iso) return;
+        (institutionsByIso[iso] = institutionsByIso[iso] || []).push(tile);
+      });
+
+      // popup que aparece ao clicar num país parceiro
+      const popup = document.createElement('div');
+      popup.className = 'world-map__popup';
+      popup.setAttribute('aria-hidden', 'true');
+      // ancora no wrap (sem overflow:hidden) para o popup não ser cortado pelo mapa
+      const mapWrap = container.closest('.world-map-wrap') || container;
+      mapWrap.appendChild(popup);
+      const hidePopup = () => {
+        popup.classList.remove('is-visible');
+        popup.setAttribute('aria-hidden', 'true');
+      };
+      const showPopup = (event, iso) => {
+        const insts = institutionsByIso[iso] || [];
+        const flag = 'https://flagcdn.com/' + iso.toLowerCase() + '.svg';
+        const countLabel = insts.length === 1 ? '1 instituição parceira' : insts.length + ' instituições parceiras';
+        let html = '<button class="world-map__popup-close" type="button" aria-label="Fechar">×</button>';
+        html += '<header class="world-map__popup-head">';
+        html += '<img class="world-map__popup-flag" src="' + flag + '" alt="Bandeira de ' + (ptNames[iso] || iso) + '" />';
+        html += '<div class="world-map__popup-headtext">';
+        html += '<p class="world-map__popup-title">' + (ptNames[iso] || iso) + '</p>';
+        if (insts.length) html += '<p class="world-map__popup-count">' + countLabel + '</p>';
+        html += '</div></header>';
+        if (insts.length) {
+          html += '<ul class="world-map__popup-list">';
+          insts.forEach((t, idx) => {
+            const img = t.querySelector('img');
+            const logo = img ? img.getAttribute('src') : '';
+            const tipo = t.dataset.tipo || '';
+            html += '<li><button type="button" data-inst="' + idx + '" style="--i:' + idx + '">';
+            if (logo) html += '<span class="world-map__popup-logo"><img src="' + logo + '" alt="" loading="lazy" /></span>';
+            html += '<span class="world-map__popup-info">';
+            html += '<span class="world-map__popup-name">' + (t.dataset.nome || '') + '</span>';
+            if (tipo) html += '<span class="world-map__popup-tag">' + tipo + '</span>';
+            html += '</span>';
+            html += '<span class="world-map__popup-arrow" aria-hidden="true">›</span>';
+            html += '</button></li>';
+          });
+          html += '</ul>';
+        } else {
+          html += '<p class="world-map__popup-empty">País parceiro do TRAMA.</p>';
+        }
+        popup.classList.remove('is-below');
+        popup.innerHTML = html;
+
+        // posiciona em relação ao wrap (sem overflow), evitando cortes
+        const rect = mapWrap.getBoundingClientRect();
+        const margin = 10;
+        const gap = 14;
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.top;
+
+        // escolhe o lado (acima/abaixo) com mais espaço livre
+        const spaceAbove = y - gap - margin;
+        const spaceBelow = rect.height - y - gap - margin;
+        const below = spaceBelow >= spaceAbove;
+        if (below) popup.classList.add('is-below');
+
+        // limita a altura da lista ao espaço disponível para não ser cortado
+        const list = popup.querySelector('.world-map__popup-list');
+        if (list) {
+          const head = popup.querySelector('.world-map__popup-head');
+          const headH = head ? head.offsetHeight : 56;
+          const avail = (below ? spaceBelow : spaceAbove) - headH - 22;
+          list.style.maxHeight = Math.max(96, Math.min(240, avail)) + 'px';
+        }
+
+        // horizontal: mantém o popup (centrado em x) dentro do container
+        const half = popup.offsetWidth / 2;
+        x = Math.max(half + margin, Math.min(x, rect.width - half - margin));
+        popup.style.left = x + 'px';
+        popup.style.top = y + 'px';
+
+        popup.classList.add('is-visible');
+        popup.setAttribute('aria-hidden', 'false');
+        popup.querySelector('.world-map__popup-close').addEventListener('click', hidePopup);
+        popup.querySelectorAll('[data-inst]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const t = insts[Number(btn.dataset.inst)];
+            hidePopup();
+            if (t) t.click(); // reusa o modal de detalhes já existente
+          });
+        });
+      };
+      popup.addEventListener('click', (e) => e.stopPropagation());
+      document.addEventListener('click', hidePopup);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hidePopup(); });
+
+      // distingue clique de arraste (pan) para não abrir o popup ao mover o mapa
+      let downPt = null;
+      svg.addEventListener('mousedown', (e) => { downPt = { x: e.clientX, y: e.clientY }; });
+      // a sede (Brasil) também é clicável: é onde está a maioria das instituições
+      const clickableSet = new Set([...partnerIsos, homeIso].filter(Boolean));
+
       svg.querySelectorAll('path[name], path[id]').forEach((path) => {
         const iso = (path.getAttribute('id') || '').toUpperCase();
         const fallback = path.getAttribute('name') || iso;
         const name = ptNames[iso] || fallback;
         if (!name || name === 'world.svg') return;
-        path.addEventListener('mousemove', (e) => showTooltip(e, name));
-        path.addEventListener('mouseleave', hideTooltip);
+        if (tooltip) {
+          path.addEventListener('mousemove', (e) => showTooltip(e, name));
+          path.addEventListener('mouseleave', hideTooltip);
+        }
+        if (clickableSet.has(iso)) {
+          path.classList.add('is-clickable');
+          path.addEventListener('click', (e) => {
+            if (downPt && Math.hypot(e.clientX - downPt.x, e.clientY - downPt.y) > 6) return; // foi arraste
+            e.stopPropagation();
+            if (tooltip) hideTooltip();
+            showPopup(e, iso);
+          });
+        }
       });
     })
     .catch((err) => {
